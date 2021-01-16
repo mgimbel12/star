@@ -80,3 +80,14 @@ $headlines-color : white;
     -ms-flex-flow: row wrap;
     flex-flow: row wrap;
 }    
+
+    @mixin flex-container($axis, $wrap: nowrap) {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: $axis $wrap;
+    -ms-flex-flow: $axis $wrap;
+    flex-flow: $axis $wrap;
+}
+         
