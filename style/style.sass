@@ -93,3 +93,72 @@ $headlines-color : white;
          fieldset > div {
     @include flex-container(column);        
 }
+
+    fieldset > div {
+    @include flex-container(row, wrap);        
+}
+    .center {
+  width: 90%;
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+}
+       @mixin center {
+  width: 90%;
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+}
+#content {
+    @include center;
+}
+    //set breakpoint sizes
+$break-small: 20em;
+$break-medium: 31em;
+$break-large: 60em;
+
+@mixin breakpoint($break) {
+@if $break == large {
+@media (max-width: $break-large) { @content; }
+}
+@else if $break == medium {
+@media (max-width: $break-medium) { @content; }
+}
+@else if $break == small {
+@media (max-width: $break-small) { @content; }
+} @else {
+@media ($break) { @content; }
+}
+}              
+    body {
+background: white;
+@include breakpoint(large) { background: red; }
+@include breakpoint(medium) { background: cyan; }
+@include breakpoint(small) { background: green; }
+@include breakpoint(“max-width: 480px”) { background: yellow; }
+}      
+
+    body {
+    background: white;
+}
+@media (max-width: 60em) {
+     body {
+        background: red;
+    }
+}
+@media (max-width: 31em) {
+    body {
+        background: cyan;
+    }
+}
+@media (max-width: 20em) {
+    body {
+        background: green;
+    }
+}
+@media (max-width: 480px) {
+    body {
+        background: yellow;
+    }
+}
+           
