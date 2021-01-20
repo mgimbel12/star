@@ -1,3 +1,18 @@
+$myFont: Helvetica, Arial,sans-serif;
+$myfont-family:lora;
+$myFontSize: 18px;
+$myWidth: 680px;
+
+body {
+  font-family: $myFont;
+  font-size: $myFontSize;
+  color: $myColor;
+}
+
+#container {
+  width: $myWidth;
+}
+
 //review assignment
 
 /*url comments goes here*/
@@ -15,24 +30,24 @@ $text-decoration-color:#F8F8ff;
 
 /*body comments goes here*/
 body{
-    font-family: Helvetica, Arial, sans-serif;
-    background-color: #FAEBD7;
+    font-family: $myFont;
+    background-color: $body-background-color:
     padding:5px;
     max-width: 98%;
 }
 /*nav comments goes here*/
 nav a:active{
-    color: #DEB887;
+    color:$nav-color;
  a:hover{
-    color: #F8F8FF;
+    color: $text-decoration-color;
     text-decoration: underline;
 }
 /*header comments goes here*/
 header{
-    background-color: #6495ED;
+    background-color:$header-background-color;
     text-align: right;
     padding: 50px;
-    color: #FAEBD7;
+    color:$header-color;
     margin-top: -40px;
     margin-left: -40px;
     margin-right: -35px;  
@@ -47,7 +62,7 @@ ul{
 }
 /*horizontal rule comments goes here*/
 hr{
-    color: #FAEBD7; 
+    color:$header-color; 
 }
 /*active rule comments goes here*/
     a {
@@ -55,7 +70,7 @@ hr{
 }
 /*heading comments for heading 1 and heading 2 goes here */
 h1, h2 {
-    font-family: Lora;
+    font-family:$myfont-family
 }
 
 h1 a {
