@@ -1,7 +1,6 @@
 /* Global styles */
 *, *:before, *:after {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
@@ -18,9 +17,7 @@ body {
 
 #contactform > input, #contactform > textarea {
   background-color: antiquewhite;
-  -webkit-box-flex:4;
-      -ms-flex: 4;
-          flex: 4;
+  flex: 2;
 }
 
 @media (min-width: 31em) {
@@ -32,7 +29,7 @@ body {
   }
 }
 
-@media (min-width: 70em) {
+@media (min-width: 60em) {
   #contactform > {
     width: 70%;
     max-width: 900px;
@@ -43,37 +40,33 @@ body {
 
 #contactform fieldset > div {
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-flex-flow: column nowrap;
   -ms-flex-flow: column nowrap;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: center;
-          flex-flow: column nowrap;
+  flex-flow: column nowrap;
 }
 
 #contactform fieldset > div label {
-  -webkit-box-flex: 2;
-      -ms-flex: 2;
-          flex: 2;
-  text-align: center;
+  flex: 1;
+  text-align: left;
 }
 
 @media (min-width: 31em) {
   #contactform fieldset > div {
     display: -webkit-box;
+    display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
+    -webkit-flex-flow: row nowrap;
     -ms-flex-flow: row nowrap;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-            flex-flow: row nowrap;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    margin-bottom: 2em;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    margin-bottom: 1em;
   }
   #contactform fieldset > div label {
-    text-align: center;
+    text-align: right;
     margin-right: 1em;
   }
 }
@@ -81,4 +74,3 @@ body {
 h1, h2, h3, h4, h5, h6 {
   color: white;
 }
-/*# sourceMappingURL=styles.css.map */
